@@ -1,14 +1,19 @@
-public static GCD{
-	public static int find GCD(int a ,int b){
-		if(b==0){
-			return a;
-		}
-		return find GCD(b,a%b);
-	}
-	public static void main(String[] args){
-		int num1=10;
-		int num2=20;
-		int gcd=find GCD(num1,num2)
-			System.out.println("The GCD of"+num1+"and"+num2+"is:"+gcd);
-	}
+public class GCD {
+    public static int findGCD(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    public static void main(String[] args) {
+        // Example input numbers
+        int num1 = 56;
+        int num2 = 98;
+        int gcd = findGCD(num1, num2);
+        System.out.println("The GCD of " + num1 + " and " + num2 + " is: " + gcd);
+    }
 }
+
